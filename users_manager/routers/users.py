@@ -17,17 +17,12 @@ class User(BaseModel):
 users_list = [User(id=1, name="a", surname="aaa", url="www.a.com", age=1),
               User(id=2, name="b", surname="bbb", url="www.b.com", age=2)]
 
-
 def search_user(id: int):
     users = filter(lambda x: x.id == id, users_list)
     try:
         return list(users)[0]
     except:
         return {"Error": "No se ha esncontrado el usuario"}
-
-
-print(search_user(1))
-
 
 @router.get("/")
 async def users():
