@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from routers import users, jwt_auth_users
-from fastapi.staticfiles import StaticFiles
+# from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
